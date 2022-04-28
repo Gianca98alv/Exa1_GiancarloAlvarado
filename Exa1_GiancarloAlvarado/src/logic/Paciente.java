@@ -1,7 +1,7 @@
 package logic;
 
 public final class Paciente {
-	
+	//Inmutabilidad
 	private final String nombre;
 	private final int edad;
 	private final int temperatura;

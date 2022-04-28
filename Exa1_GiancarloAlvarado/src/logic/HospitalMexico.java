@@ -1,7 +1,7 @@
 package logic;
 
 import java.util.List;
-
+//Herencia
 public class HospitalMexico extends OMS{
 
 	private Hospital hospitalMexico;

@@ -15,9 +15,11 @@ public class Test {
 		pacientesMexico.add(new Paciente ("Alicia Rivera", 69, 40, true));
 		pacientesMexico.add(new Paciente ("Ulises Ugalde", 15, 32, false));
 		
+		//Polimorfismo
 		OMS hospitalMexico = new HospitalMexico(pacientesMexico);
 		System.out.println(hospitalMexico.imprimirReporte());
 		
+		//Polimorfismo
 		OMS hospitalNicoya = new HospitalNicoya(pacientesNicoya);
 		System.out.println(hospitalNicoya.imprimirReporte());
 		

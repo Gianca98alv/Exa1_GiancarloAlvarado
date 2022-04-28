@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class OMS {
-	
+	//Encapsulacion
 	private List<Paciente> pacientes;
 	private List<PruebaCovid19> resultados;
-
+	
+	//Inyeccion de dependencias de pacientes
 	public OMS(List<Paciente> pacientes) {
 		this.pacientes = pacientes;
 		this.resultados = new ArrayList();
@@ -16,6 +17,7 @@ public abstract class OMS {
 	
 	protected abstract Boolean isGamHospital();
 	protected abstract Hospital getNombreHospital();
+	
 	
 	private void diagnosticar() {
 		resultados = new ArrayList();
@@ -30,6 +32,7 @@ public abstract class OMS {
 		}
 	}
 	
+	//Alta cohesion y bajo acoplamiento
 	public String imprimirReporte() {
 		String reporte = "Reporte del hospital=" + this.getNombreHospital() + "\n"; 
 		for (PruebaCovid19 pruebaCovid19 : resultados) {
